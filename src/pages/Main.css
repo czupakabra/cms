@@ -1,0 +1,39 @@
+.main-header{
+    background: #252525 none repeat scroll 0 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-width: 1000px;
+    z-index: 2;
+    clear: both;
+    height: 70px;
+}
+.main-header *{
+    display: inline-block;
+    vertical-align: top;
+}
+.main-header .main-logo{
+    background: red;
+    width: 200px;
+    height: 70px;
+}
+.main-header .main-cms{
+    float: right;
+}
+.main-header .main-menu-item{
+    display: inline-block;
+    height: 70px;
+    box-sizing: border-box;
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-body{
+    width: 1500px;
+    height: 1000px;
+    margin: 0 auto;
+    margin-top: 80px;
+    background: #333333 none repeat scroll 0 0;
+}
