@@ -9,7 +9,7 @@ class Main extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { page: 'blog' };
+        this.state = { page: 'blog', classBody: 'main-body-blog' };
 
         this._blogOnClick = this._blogOnClick.bind(this);
         this._aboutMeOnClick = this._aboutMeOnClick.bind(this);
@@ -17,30 +17,35 @@ class Main extends Component {
     }
 
     _blogOnClick() {
-        this.setState({ page: 'blog' });        
+        this.setState({ page: 'blog', classBody: 'main-body-blog'});        
     }
     _aboutMeOnClick() {
-        this.setState({ page: 'aboutMe' });        
+        this.setState({ page: 'aboutMe', classBody: 'main-body' });        
     }
     _cmsOnClick(){
 
     }
     render() {
-        let body;
+        let body, classBody;
         switch (this.state.page) {
             case 'main':
                     body = <AboutMe />;
+                    classBody = 'main-body-blog';
                 break;
             case 'aboutMe':
                     body = <AboutMe />;
+                    classBody = 'main-body';
                 break;
             case 'blog':
                     body = <Blog />;
+                    classBody = 'main-body-blog';
                 break;
             default:
                     body = <AboutMe />;
+                    classBody = 'main-body';
                 break;
         }
+        
         return (
             <Fragment>
                 <header className="main-header">
@@ -54,7 +59,7 @@ class Main extends Component {
                     </div>
                 </header>
 
-                <section className="main-body">
+                <section className={classBody}>
                     {body}
                 </section>
             </Fragment>
