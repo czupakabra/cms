@@ -1,0 +1,27 @@
+.bloggrid-container{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat( auto-fill, minmax( 300px, 1fr ) );    
+    grid-auto-rows: 500px;
+    width: 100%;    
+    height: 100%;
+    overflow: hidden;
+}
+.bloggrid-container .bloggrid-item{
+    overflow: hidden; 
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 5px;
+}
+
+.bloggrid-container .bloggrid-item-span--2x {
+    grid-row-end: span 2;
+ }
+.bloggrid-container .bloggrid-item-span--3x {
+    grid-row-end: span 3;
+ }
+
+@media (min-width: 992px){
+
+}

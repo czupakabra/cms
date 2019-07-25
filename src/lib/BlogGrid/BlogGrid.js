@@ -11,7 +11,7 @@ class BlogGrid extends Component {
     render() {
         return (
             <div className="bloggrid-container" >                
-                
+                {this.props.children}
             </div>
         );
     }
